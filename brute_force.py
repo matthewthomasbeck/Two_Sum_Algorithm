@@ -22,9 +22,8 @@ def two_sum():
     # Brute force approach using two loops
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
-            print(f"Checking pair: ({nums[i]}, {nums[j]}) at indices ({i}, {j})")
             if nums[i] + nums[j] == target:
-                print(f"Output: {j} {i}")
+                print(f"Output: {i} {j}")
                 return
 
 # Run the function

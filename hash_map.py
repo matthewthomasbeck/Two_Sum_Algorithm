@@ -16,9 +16,7 @@
 ########################################
 
 def two_sum():
-
     nums = list(map(int, input("Enter the input data array items: ").split()))
-
     target = int(input("Enter the target value: "))
 
     num_map = {}
@@ -26,7 +24,7 @@ def two_sum():
     for i, num in enumerate(nums):
         complement = target - num
         if complement in num_map:
-            print(f"Output: {i} {num_map[complement]}")
+            print(f"Output: {num_map[complement]} {i}")
             return
         num_map[num] = i
         print(f"Adding to hash table: key:{num}, value: {i}")
