@@ -15,16 +15,28 @@
 ############### BRUTE FORCE ###############
 ###########################################
 
-def two_sum():
+
+########## TWO SUM FUNCTION ##########
+
+def two_sum(): # function to implement two sum algorithm via brute force
+
+    ##### get user input #####
+
     nums = list(map(int, input("Enter the input data array items: ").split()))
     target = int(input("Enter the target value: "))
 
-    # Brute force approach using two loops
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)):
-            if nums[i] + nums[j] == target:
-                print(f"Output: {i} {j}")
-                return
+    ##### brute force approach #####
 
-# Run the function
-two_sum()
+    for i in range(len(nums)): # loop through input data array
+
+        for j in range(i + 1, len(nums)): # loop through input data array
+
+            if nums[i] + nums[j] == target: # if sum of two numbers equals target...
+
+                print(f"Output: {i} {j}") # print output
+
+                return # end function
+
+########## RUN FUNCTION ##########
+
+two_sum() # run the function

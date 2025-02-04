@@ -15,19 +15,37 @@
 ############### HASH MAP ###############
 ########################################
 
-def two_sum():
-    nums = list(map(int, input("Enter the input data array items: ").split()))
-    target = int(input("Enter the target value: "))
+
+########## TWO SUM FUNCTION ##########
+
+def two_sum(): # function to implement two sum algorithm via hash map
+
+    ##### set variables #####
 
     num_map = {}
 
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in num_map:
-            print(f"Output: {num_map[complement]} {i}")
-            return
-        num_map[num] = i
-        print(f"Adding to hash table: key:{num}, value: {i}")
+    ##### get user input #####
 
-# Run the function
-two_sum()
+    nums = list(map(int, input("Enter the input data array items: ").split())) # input data array
+    target = int(input("Enter the target value: ")) # target value
+
+    ##### hash map approach #####
+
+    for i, num in enumerate(nums): # loop through input data array
+
+        complement = target - num # calculate complement
+
+        if complement in num_map: # if complement is in hash table...
+
+            print(f"Output: {num_map[complement]} {i}") # print output
+
+            return # end function
+
+        num_map[num] = i # add to hash table
+
+        print(f"Adding to hash table: key:{num}, value: {i}") # print hash table addition
+
+
+########## RUN FUNCTION ##########
+
+two_sum() # run the function
